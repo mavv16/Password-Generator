@@ -64,7 +64,9 @@ namespace passwordGenerator {
             var choose = rand.Next(0, 2);   //0|1
 
             if (choose == 0) {//put the words at the beggining
-                
+                foreach (var element in checkedListBox_words.CheckedItems) {
+                    textBox_result.Text += element;
+                }
                 writeNumberOfcharacters();
                 writeTypeOfCharacters();
             }
